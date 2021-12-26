@@ -1,0 +1,25 @@
+https://api.fyers.in/api/v2/generate-authcode?client_id=8LODKCYPOR-100&redirect_uri=http%3A%2F%2F127.0.0.1%3A5000%2Flogin&response_type=code&state=None
+
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGkubG9naW4uZnllcnMuaW4iLCJpYXQiOjE2NDA0MTExOTQsImV4cCI6MTY0MDQ0MTE5NCwibmJmIjoxNjQwNDEwNTk0LCJhdWQiOlsieDowIiwieDoxIiwieDoyIiwiZDoxIiwiZDoyIiwieDoxIiwieDowIl0sInN1YiI6ImF1dGhfY29kZSIsImRpc3BsYXlfbmFtZSI6IlhBMDI5NTkiLCJub25jZSI6IiIsImFwcF9pZCI6IjhMT0RLQ1lQT1IiLCJ1dWlkIjoiZGFlNGU3NjZmZjJkNGJiMzgwMzhmMGQ0MDVkZDhkZjYiLCJpcEFkZHIiOiIxMDYuMjEyLjEyNi4xNDciLCJzY29wZSI6IiJ9.QZuNpO9TZiMgL_WR_MwW7fqhNVRG-I66opnSIZ5TxyA
+
+{'s': 'ok', 'code': 200, 'message': '', 'access_token':
+'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcGkuZnllcnMuaW4iLCJpYXQiOjE2NDA0MTEzMTQsImV4cCI6MTY0MDQ3ODYzNCwibmJmIjoxNjQwNDExMzE0LCJhdWQiOlsieDowIiwieDoxIiwieDoyIiwiZDoxIiwiZDoyIiwieDoxIiwieDowIl0sInN1YiI6ImFjY2Vzc190b2tlbiIsImF0X2hhc2giOiJnQUFBQUFCaHhyQ3kyVHM1RXFHY2xUTTE4WG84ZGU1TjhBWURabUJFbzA1ekdMWDZzRElINlhqUktnSm1jUGUwYkN1Q2pVaDRjNXV3UnBobUZiWUlTT0l4YmlsQUZJZWRUN1d6eXFWa0NSbUVqZzlzOEI3NUh2OD0iLCJkaXNwbGF5X25hbWUiOiJBQkhJSkVFVFNJTkdIIFBSRU1TSU5HSCBSIiwiZnlfaWQiOiJYQTAyOTU5IiwiYXBwVHlwZSI6MTAwLCJwb2FfZmxhZyI6Ik4ifQ.XD_DHA32s9UmctCN2j6sG1XUDDcHRUiHBi2riZNW0nM'
+}
+
+
+data = {
+            "symbol": symbol,
+            "qty": qty,
+            "type": 2,
+            "side": 1 if isBuy else -1,
+            "productType": "INTRADAY",
+            "limitPrice": 0,
+            "stopPrice": 0,
+            "validity": "DAY",
+            "disclosedQty": 0,
+            "stopLoss": 0,
+            "offlineOrder": "True",
+            "takeProfit": 0
+        }
+
+        print(fyers.place_order(data))
